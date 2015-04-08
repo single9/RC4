@@ -2,7 +2,7 @@
 //  rc4.cpp
 //  rc4
 //
-//  Created by Jing Chen on 4/8/15.
+//  Created by Duye Chen on 4/8/15.
 //
 
 #include "rc4.h"
