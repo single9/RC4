@@ -7,9 +7,39 @@
 //
 
 #include <iostream>
+#include "rc4.h"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+using namespace::std;
+
+RC4 rc4;
+
+int main(int argc, const char * argv[])
+{
+    string key, str, out;
+    
+    cout << "Input key:";
+    cin >> key;
+    
+    cout << "Input Plaintext:";
+    cin >> str;
+    
+    out = rc4.doRC4(str, key);
+    
+    cout << "Ciphertext:\t" << out << endl;
+    
+    cout << "Plaintext:\t" << rc4.doRC4(out, key) << endl;
+    
+    
+    // Key2
+    cout << "Input second key:";
+    cin >> key;
+    
+    out = rc4.doRC4(str, key);
+    
+    cout << "Ciphertext:\t" << out << endl;
+    
+    cout << "Plaintext:\t" << rc4.doRC4(out, key) << endl;
+    
+    //system("pause");
     return 0;
 }
